@@ -243,7 +243,7 @@ class MyApp(wx.App):
 	def OnInit(self):
 		wx.InitAllImageHandlers()
 
-		image_ndarray=imread('13agosto_holo.bmp')
+		image_ndarray=zeros((480,640))
 
 		frame_1 = MyFrame(image_ndarray)
 		if frame_1.ShowModal()==wx.ID_OK:
@@ -251,10 +251,7 @@ class MyApp(wx.App):
 
 		frame_1.Destroy()
 
-		print "detenido"
-		#imshow(frame_1.mask)
-		#frame_1.destroy()	
-		#frame_1.set_image("")
+
 
 		self.SetTopWindow(frame_1)
 
